@@ -1,0 +1,11 @@
+import time
+
+from selenium import webdriver
+
+wd = webdriver.Chrome('D:\cafe24\chromedriver_win32\chromedriver.exe')
+wd.get('http://www.google.com')
+
+time.sleep(2)
+html = wd.page_source
+print(html)
+wd.quit() # 크롬드라이버 내리기
